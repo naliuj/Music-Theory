@@ -44,11 +44,13 @@ class Scale:
         nScale.append(self.notes[list(self.notes.keys())[list(self.notes.values()).index(self.key)]])
         return nScale
 
+class Diatonic(Scale):
+
     def major(self):
-        self.ionian()
+        return self.ionian()
 
     def minor(self):
-        self.aeolian()
+        return self.aeolian()
 
     def ionian(self):
         scale = self.scaleCalc([2, 2, 1, 2, 2, 2, 1])
